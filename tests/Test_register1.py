@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 import random
 
-class TestBooksCollector1:
+class TestbooksCollector1:
     def test_register_new_name_email_passowrld_random(self, driver): 
         driver.get('https://stellarburgers.nomoreparties.site/register') 
 
@@ -16,7 +16,6 @@ class TestBooksCollector1:
         driver.find_element(By.XPATH, "//label[contains(text(),'Email')]/following-sibling::input").send_keys(email)
         driver.find_element(By.XPATH, "//label[contains(text(),'Пароль')]/following-sibling::input").send_keys(passowrld)
         driver.find_element(By.CSS_SELECTOR, "button.button_button__33qZ0").click()
-        WebDriverWait(driver, 10)
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
 
 
