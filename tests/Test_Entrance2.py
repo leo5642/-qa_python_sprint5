@@ -5,14 +5,14 @@ from selenium.webdriver.support.wait import WebDriverWait
 #Вход
 
 
-class TestbooksCollector2:
+class Testbookscollector2:
     def test_button_exitInLogin(self, driver): 
         driver.get('https://stellarburgers.nomoreparties.site') 
 
         driver.find_element(By.XPATH, ".//button[text()='Оформить заказ']").click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
 
-    def test_button_personaAccount(self, driver):
+    def test_button_personaaccount(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site') 
 
         driver.find_element(By.XPATH, ".//p[text()='Личный Кабинет']").click()

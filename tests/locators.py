@@ -1,10 +1,11 @@
 from selenium.webdriver.common.by import By
 
-class AuthPageLocators:
-    EMAIL_INPUT = (By.XPATH, "//label[contains(text(),'Email')]/following-sibling::input")
-    PASSWORD_INPUT = (By.XPATH, "//label[contains(text(),'Пароль')]/following-sibling::input")
-    LOGIN_BUTTON = (By.CSS_SELECTOR, "button.button_button__33qZ0")
+class Authpagelocators:
+    email_input = (By.XPATH, "//label[contains(text(),'Email')]/following-sibling::input")
+    password_input = (By.XPATH, "//label[contains(text(),'Пароль')]/following-sibling::input")
+    login_button = (By.CSS_SELECTOR, "button.button_button__33qZ0")
 
-class ProfilePageLocators:
-    PROFILE_BUTTON = (By.XPATH, "//p[text()='Личный Кабинет']")
-    PROFILE_HEADER = (By.XPATH, "//h2[contains(text(),'Профиль')]")
+class Profilepagelocators:
+    profile_button = (By.XPATH, "//p[text()='Личный Кабинет']")
+    profile_header = (By.XPATH, "//h2[contains(text(),'Профиль')]")
+    name_input = (By.XPATH, "//input[@name='name']")

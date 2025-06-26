@@ -4,7 +4,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 import random
 
-class TestbooksCollector1:
+class Testbookscollector1:
     def test_register_new_name_email_passowrld_random(self, driver): 
         driver.get('https://stellarburgers.nomoreparties.site/register') 
 

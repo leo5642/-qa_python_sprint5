@@ -4,8 +4,8 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
 #Переход в личный кабинет 
 
-class TestbooksCollector3:
-    def test_button_personalAccount(self, driver, auth): 
+class Testbookscollector3:
+    def test_button_personalaccount(self, driver, auth): 
         driver.find_element(By.XPATH, ".//p[text()='Личный Кабинет']").click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/account/profile'
 
