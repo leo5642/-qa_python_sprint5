@@ -6,26 +6,26 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 class Testbookscollector2:
-    def test_button_exitInLogin(self, driver): 
+    def test_button_exitinlogin(self, driver): 
         driver.get('https://stellarburgers.nomoreparties.site') 
 
-        driver.find_element(By.XPATH, ".//button[text()='Оформить заказ']").click()
+        driver.find_element(*LoginPageLocators.of_zakas_button).click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
 
     def test_button_personaaccount(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site') 
 
-        driver.find_element(By.XPATH, ".//p[text()='Личный Кабинет']").click()
+        driver.find_element(*LoginPageLocators.profile_button).click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
 
     def test_button_exit_in_register(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site/register') 
 
-        driver.find_element(By.XPATH, ".//a[text()='Войти']").click()
+        driver.find_element(*LoginPageLocators.exit_button).click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
 
     def test_button_exit_in_password_recovery(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site/forgot-password') 
 
-        driver.find_element(By.XPATH, ".//a[text()='Войти']").click()
+        driver.find_element(*LoginPageLocators.exit_button).click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'

@@ -6,22 +6,22 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 class Testbookscollector4:
     def test_button_constructor_coys(self, driver, auth): 
-        driver.find_element(By.XPATH, "//div/span[text()='Соусы']").click()
-        rd = driver.find_element(By.XPATH, "//div[contains(@class, 'tab_tab_type_current__')]/span[@class='text text_type_main-default']")
+        driver.find_element(*LoginPageLocators.coyc_button).click()
+        rd = driver.find_element(*LoginPageLocators.vibor_button)
         assert rd.text == 'Соусы'
 
 
     def test_button_construktor_nachinki(self, driver, auth):
 
-        driver.find_element(By.XPATH, "//div/span[text()='Начинки']").click()
-        rd = driver.find_element(By.XPATH, "//div[contains(@class, 'tab_tab_type_current__')]/span[@class='text text_type_main-default']")
+        driver.find_element(*LoginPageLocators.nach_button).click()
+        rd = driver.find_element(*LoginPageLocators.vibor_button)
         assert rd.text == 'Начинки'
 
 
     def test_button_construktor_boolki(self, driver, auth):
 
-        driver.find_element(By.XPATH, "//div/span[text()='Соусы']").click()
-        driver.find_element(By.XPATH, "//div/span[text()='Булки']").click()
-        rd = driver.find_element(By.XPATH, "//div[contains(@class, 'tab_tab_type_current__')]/span[@class='text text_type_main-default']")
+        driver.find_element(*LoginPageLocators.coyc_button).click()
+        driver.find_element(*LoginPageLocators.bylk_button).click()
+        rd = driver.find_element(*LoginPageLocators.vibor_button)
         assert rd.text == 'Булки'
 

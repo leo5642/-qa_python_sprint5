@@ -12,10 +12,10 @@ class Testbookscollector1:
         email = name + '@test.ru' 
         passowrld = random.randint(100000, 99999999)
 
-        driver.find_element(By.XPATH,"//label[contains(text(),'Имя')]/following-sibling::input").send_keys(name)
-        driver.find_element(By.XPATH, "//label[contains(text(),'Email')]/following-sibling::input").send_keys(email)
-        driver.find_element(By.XPATH, "//label[contains(text(),'Пароль')]/following-sibling::input").send_keys(passowrld)
-        driver.find_element(By.CSS_SELECTOR, "button.button_button__33qZ0").click()
+        driver.find_element(*LoginPageLocators.login_input).send_keys(name)
+        driver.find_element(*LoginPageLocators.email_input).send_keys(email)
+        driver.find_element(*LoginPageLocators.passworld_input).send_keys(passowrld)
+        driver.find_element(*LoginPageLocators.login_button).click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
 
 
@@ -23,6 +23,6 @@ class Testbookscollector1:
     def test_error_passworld(self, driver): 
         driver.get('https://stellarburgers.nomoreparties.site/register') 
 
-        driver.find_element(By.XPATH, "//label[contains(text(),'Пароль')]/following-sibling::input").send_keys('21312')
-        driver.find_element(By.CSS_SELECTOR, "button.button_button__33qZ0").click()
-        assert 'Некорректный пароль' == driver.find_element(By.CLASS_NAME, 'input__error').text
+        driver.find_element(*LoginPageLocators.passworld_input).send_keys('21312')
+        driver.find_element(*LoginPageLocators.login_button).click()
+        assert 'Некорректный пароль' == driver.find_element(*LoginPageLocators.error_message).text
