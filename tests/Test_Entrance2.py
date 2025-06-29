@@ -6,13 +6,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 
 
 class Testbookscollector2:
-    def test_button_exitinlogin(self, driver): 
+    def test_button_exitin_login(self, driver): 
         driver.get('https://stellarburgers.nomoreparties.site') 
 
         driver.find_element(*LoginPageLocators.of_zakas_button).click()
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
 
-    def test_button_personaaccount(self, driver):
+    def test_button_persona_account(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site') 
 
         driver.find_element(*LoginPageLocators.profile_button).click()
