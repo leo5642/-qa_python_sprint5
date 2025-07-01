@@ -2,8 +2,9 @@ import pytest
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from locators import Authpagelocators
-from test_data import Userdata
+from data import Userdata
 import random
+
 
 class TestRegistration:
     def test_register_new_name_email_passowrld_random(self, driver):

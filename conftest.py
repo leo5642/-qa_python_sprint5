@@ -18,23 +18,6 @@ def driver():
 def auth(driver):
     
     driver.get('https://stellarburgers.nomoreparties.site/login')
-    
-    email_field = WebDriverWait(driver, 10).until(
-        ec.visibility_of_element_located(AuthPageLocators.email_input)
-    )
-    email_field.send_keys(AuthData.valid_email)
-    
-    password_field = WebDriverWait(driver, 10).until(
-        ec.visibility_of_element_located(AuthPageLocators.password_input)
-    )
-    password_field.send_keys(AuthData.valid_password)
-    
-    login_button = WebDriverWait(driver, 10).until(
-        ec.element_to_be_clickable(AuthPageLocators.login_button)
-    )
-    login_button.click()
-    
-    WebDriverWait(driver, 10).until(
-        ec.url_contains("https://stellarburgers.nomoreparties.site/")
-    )
-
+    driver.find_element(*Authpagelocators.email_input).send_keys(Authdata.valid_email)
+    driver.find_element(*Authpagelocators.password_input).send_keys(Authdata.valid_password)
+    driver.find_element(*Authpagelocators.login_button).click()

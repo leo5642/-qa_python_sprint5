@@ -11,7 +11,7 @@ class Authpagelocators:
 
 
 class Profilepagelocators:
-    of_zakas_button = (By.XPATH, ".//button[text()='Оформить заказ']")
+    of_zakas_button = (By.XPATH, ".//button[text()='Войти в аккаунт']")
     profile_button = (By.XPATH, "//p[text()='Личный Кабинет']")
     exit_button = (By.XPATH, ".//a[text()='Войти']")
     profile_header = (By.XPATH, "//h2[contains(text(),'Профиль')]")
@@ -24,4 +24,4 @@ class Profilepagelocators:
 
     kons_button = (By.XPATH, ".//p[text()='Конструктор']")
     logo_button = (By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']/a")
-    acco_button = (By.CSS_SELECTOR, "button.Account_button__14Yp3")
+    acco_button = (By.XPATH, ".//button[text()='Выход']")
