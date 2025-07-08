@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 
-class Authpagelocators:
+class AuthPageLocators:
     login_input =  (By.XPATH,"//label[contains(text(),'Имя')]/following-sibling::input")
     email_input = (By.XPATH, "//label[contains(text(),'Email')]/following-sibling::input")
     password_input = (By.XPATH, "//label[contains(text(),'Пароль')]/following-sibling::input")
@@ -10,18 +10,18 @@ class Authpagelocators:
 
 
 
-class Profilepagelocators:
+class ProfilePageLocators:
     of_zakas_button = (By.XPATH, ".//button[text()='Войти в аккаунт']")
     profile_button = (By.XPATH, "//p[text()='Личный Кабинет']")
-    exit_button = (By.XPATH, ".//a[text()='Войти']")
+    exit_button_profile = (By.XPATH, ".//a[text()='Войти']")
     profile_header = (By.XPATH, "//h2[contains(text(),'Профиль')]")
     name_input = (By.XPATH, "//input[@name='name']")
 
-    nach_button = (By.XPATH, "//div/span[text()='Начинки']")
-    vibor_button = (By.XPATH, "//div[contains(@class, 'tab_tab_type_current__')]/span[@class='text text_type_main-default']")
-    coyc_button = (By.XPATH, "//div/span[text()='Соусы']")
-    bylk_button = (By.XPATH, "//div/span[text()='Булки']")
+    fillings_button = (By.XPATH, "//div/span[text()='Начинки']")
+    button_active = (By.XPATH, "//div[contains(@class, 'tab_tab_type_current__')]/span[@class='text text_type_main-default']")
+    sauce_button = (By.XPATH, "//div/span[text()='Соусы']")
+    bread_button = (By.XPATH, "//div/span[text()='Булки']")
 
-    kons_button = (By.XPATH, ".//p[text()='Конструктор']")
+    constructor_button = (By.XPATH, ".//p[text()='Конструктор']")
     logo_button = (By.XPATH, "//div[@class='AppHeader_header__logo__2D0X2']/a")
-    acco_button = (By.XPATH, ".//button[text()='Выход']")
+    exit_button = (By.XPATH, ".//button[text()='Выход']")

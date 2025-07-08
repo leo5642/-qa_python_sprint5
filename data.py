@@ -1,11 +1,11 @@
 import random
 
-class Authdata:
+class AuthData:
     valid_email = "lev_struin@mail.ru"
     valid_password = "123123"
     invalid_password = "123"
 
-class Userdata:
+class UserData:
     name = "Тестовый Пользователь"
     
     @property
